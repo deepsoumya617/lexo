@@ -4,9 +4,10 @@
 Lexo is a simple and elegant dictionary web app built using ```React``` and styled with ```Tailwind CSS```. It allows users to search for English words and get detailed meanings, examples, and synonyms.
 
 ---
-## 🖼️ Preview
+## 🖼️ Preview - Light + Dark Mode
 
-![App Screenshot](./public/image.png)
+![App Screenshot](./public/light-mode.png)
+![App Screenshot](./public/dark-mode.png)
 
 ---
 
@@ -62,8 +63,8 @@ Then open ```localhost:port``` to view it in the browser.
 
 ## 💡 TODO
 
-- [❌] Add dark mode toggle
-- [❌ ] Add antonyms section
+- [✅] Add dark mode toggle
+- [❌] Add antonyms section
 
 ---
 
