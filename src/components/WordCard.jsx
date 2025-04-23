@@ -84,7 +84,7 @@ export default function WordCard(props) {
   if (data?.title == 'No Definitions Found') {
     return (
       <div className="mt-40 text-center">
-        <h3 className="font-medium text-3xl md:text-5xl tracking-wider text-zinc-400 font-ps px-3">
+        <h3 className="font-medium text-3xl md:text-5xl tracking-wider text-zinc-400 dark:text-zinc-600 font-ps px-3">
           No <br />
           Definitions Found!
         </h3>
@@ -96,7 +96,7 @@ export default function WordCard(props) {
   if (!word) {
     return (
       <div className="mt-40 text-center">
-        <h3 className="font-medium text-3xl md:text-5xl tracking-wider text-zinc-400 font-ps px-3">
+        <h3 className="font-medium text-3xl md:text-5xl tracking-wider text-zinc-400 dark:text-zinc-600 font-ps px-3">
           Search <br />
           something!
         </h3>
@@ -106,7 +106,7 @@ export default function WordCard(props) {
   if (isLoading) {
     return (
       <div className="mt-40 text-center">
-        <h3 className="font-medium text-[18px] tracking-wider text-zinc-400">
+        <h3 className="font-medium text-[18px] tracking-wider text-zinc-400 dark:text-zinc-600">
           Fetching <br />
           Word Data...
         </h3>
@@ -121,7 +121,7 @@ export default function WordCard(props) {
           <h1 className="font-bold text-3xl md:text-4xl tracking-tight font-ps">
             {word.toLowerCase()}
           </h1>
-          <p className="text-xl tracking-wide text-purple-600">
+          <p className="text-xl tracking-wide text-purple-600 dark:text-purple-500">
             {phoneticsData.text}
           </p>
         </div>
@@ -130,9 +130,9 @@ export default function WordCard(props) {
             <audio ref={audioRef} src={phoneticsData.audio} />
             <button
               onClick={() => audioRef.current && audioRef.current.play()}
-              className="text-xl md:text-2xl bg-purple-300 w-13 h-13  md:w-17 md:h-17 rounded-full cursor-pointer"
+              className="text-xl md:text-2xl bg-purple-300 dark:bg-purple-400 w-13 h-13  md:w-17 md:h-17 rounded-full cursor-pointer"
             >
-              <i className="ri-play-large-fill text-purple-600"></i>
+              <i className="ri-play-large-fill text-purple-600 dark:text-purple-700"></i>
             </button>
           </>
         )}
@@ -147,10 +147,10 @@ export default function WordCard(props) {
                 <h3 className="text-[17px] font-bold font-ps tracking-wider">
                   {partOfSpeech}
                 </h3>
-                <div className="w-full border-b border-zinc-400"></div>
+                <div className="w-full border-b border-zinc-400 dark:border-zinc-500"></div>
               </div>
               <div className="mt-3">
-                <h3 className="font-bold text-[16px] tracking-wider text-zinc-400 mb-2">
+                <h3 className="font-bold text-[16px] tracking-wider text-zinc-400 mb-2 dark:text-zinc-300">
                   Meaning
                 </h3>
                 <ul className="mb-6 px-6">
@@ -163,7 +163,7 @@ export default function WordCard(props) {
                         <span className="text-purple-500">•</span>{' '}
                         {def.definition}
                         {def.example && (
-                          <p className="mt-1 text-[16px] text-zinc-500 tracking-wider px-4">
+                          <p className="mt-1 text-[16px] text-zinc-500 dark:text-zinc-400 tracking-wider px-4">
                             {`"${def.example}"`}
                           </p>
                         )}
@@ -173,14 +173,14 @@ export default function WordCard(props) {
                 </ul>
                 {synonyms.length > 0 && (
                   <div className="mb-6">
-                    <h4 className="text-[16px] font-bold text-zinc-400 tracking-wide mb-3">
+                    <h4 className="text-[16px] font-bold text-zinc-400 tracking-wide mb-3 dark:text-zinc-300">
                       Synonyms
                     </h4>
                     <ul className="flex flex-wrap gap-2">
                       {synonyms.map((syn, idx) => (
                         <li
                           key={idx}
-                          className="text-[18px] font-medium tracking-wide text-purple-600 bg-purple-100 px-6 py-3 rounded-full"
+                          className="text-[18px] font-medium tracking-wide text-purple-600 bg-purple-100 px-6 py-3 rounded-full dark:bg-purple-300 dark:text-purple-700"
                         >
                           {syn}
                         </li>
@@ -197,9 +197,9 @@ export default function WordCard(props) {
       <div>
         <div className="flex items-center gap-3">
           <h3 className="text-[16px] font-ps font-bold">Source</h3>
-          <div className="w-full border-b border-zinc-400"></div>
+          <div className="w-full border-b border-zinc-400 dark:border-zinc-500"></div>
         </div>
-        <h4 className="mt-3 px-6 text-zinc-600  font-medium tracking-wider underline underline-offset-[7px] decoration-purple-500 hover:text-purple-500 text-sm md:text-lg">
+        <h4 className="mt-3 px-6 text-zinc-600 dark:text-zinc-400 font-medium tracking-wider underline underline-offset-[7px] decoration-purple-500 hover:text-purple-500 text-sm md:text-lg">
           <a href={sourceUrls[0]} target="_blank">
             {sourceUrls[0]}
           </a>

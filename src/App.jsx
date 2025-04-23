@@ -15,9 +15,9 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen max-w-3xl mx-auto font-sans text-zinc-900 px-4 py-6 flex flex-col">
+    <div className="min-h-screen max-w-3xl mx-auto font-sans text-zinc-900 dark:text-zinc-100 px-4 py-6 flex flex-col">
       <Header />
-      <main className='flex-grow'>
+      <main className="flex-grow">
         <SearchBar
           inputWord={inputWord}
           setInputWord={setInputWord}
@@ -26,7 +26,7 @@ export default function App() {
         <WordCard word={searchWord} />
       </main>
       <footer>
-       <FooterCard />
+        <FooterCard />
       </footer>
     </div>
   )
