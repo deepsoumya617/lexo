@@ -9,7 +9,14 @@ export default function Header() {
           Lexo
         </h1>
       </div>
-      <ChangeTheme />
+      <div className="mr-3">
+        <ChangeTheme />
+        <button className="cursor-pointer">
+          <a href="https://github.com/deepsoumya617/lexo" target="_blank">
+            <i className="ri-github-line text-[18px] hover:hover:text-purple-400"></i>
+          </a>
+        </button>
+      </div>
     </header>
   )
 }

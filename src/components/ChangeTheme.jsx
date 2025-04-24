@@ -13,7 +13,7 @@ export default function ChangeTheme() {
   }, [])
 
   function toggleTheme() {
-    const newTheme = (theme === 'light') ? 'dark' : 'light'
+    const newTheme = theme === 'light' ? 'dark' : 'light'
     setTheme(newTheme)
     localStorage.setItem('theme', newTheme)
 
@@ -24,12 +24,12 @@ export default function ChangeTheme() {
   return (
     <button
       onClick={toggleTheme}
-      className="h-10 w-10 flex items-center justify-center rounded-full border-2 border-purple-500 transition-colors duration-200 cursor-pointer mr-4"
+      className="cursor-pointer pr-4 transition duration-200"
     >
       {theme === 'dark' ? (
-        <i className="ri-sun-line text-[18px]"></i>
+        <i className="ri-sun-line text-[18px] hover:text-purple-500"></i>
       ) : (
-        <i className="ri-moon-line text-[18px]"></i>
+        <i className="ri-moon-line text-[18px] hover:text-purple-500"></i>
       )}
     </button>
   )
