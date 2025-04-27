@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from 'react'
+import { BeatLoader } from 'react-spinners';
 
 export default function WordCard(props) {
   const audioRef = useRef(null)
@@ -103,15 +104,13 @@ export default function WordCard(props) {
       </div>
     )
   }
+  // Show loading spinner while fetching word data
   if (isLoading) {
     return (
       <div className="mt-40 text-center">
-        <h3 className="font-medium text-[18px] tracking-wider text-zinc-400 dark:text-zinc-600">
-          Fetching <br />
-          Word Data...
-        </h3>
+        <BeatLoader color="#6B46C1" size={20} />
       </div>
-    )
+    );
   }
   return (
     <div className="px-4">
