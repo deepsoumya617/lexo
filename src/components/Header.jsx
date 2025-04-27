@@ -1,9 +1,16 @@
 import ChangeTheme from './ChangeTheme'
 
 export default function Header() {
+  // Refresh page on tap
+  function handlePageRefresh() {
+    window.location.reload()
+  }
   return (
     <header className="flex justify-between items-center text-3xl">
-      <div className="flex items-center gap-1">
+      <div
+        className="flex items-center gap-1 cursor-pointer"
+        onClick={handlePageRefresh}
+      >
         <i className="ri-book-open-line"></i>
         <h1 className="font-bold tracking-tight font-ps underline underline-offset-[5px] decoration-purple-500">
           Lexo
